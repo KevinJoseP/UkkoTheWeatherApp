@@ -15,14 +15,38 @@
             <div class="search-bar-cont">
                 <form action="" class="search-bar-form">
                     <input type="text" id="search-input" placeholder="Search a place to get weather info">
-                    <button type="submit" class="button"><img src="./images/search.png" alt="search" id="search-icon-img"></button>
+                    <button type="submit" class="button"><img src="./images/search.svg" alt="search" id="search-icon-img"></button>
                 </form>
             </div>
             <div class="place-cont">
-                <div class="City">Kochi</div>
-                <div class="location-grouping">
-                    <div class="country">India</div>
-                    <div class="coordinates-cont">35/78.3</div>
+                <div class="main-grouping-div">
+                    <div class="City">Kochi</div>
+                    <div class="location-grouping">
+                        <div class="geo-grouping">
+                            <img src="./images/location.svg" alt="geographical location" class="icon-images">
+                            <div class="country">India</div>
+                            <div class="coordinates-cont">35/78.3</div>
+                        </div>
+                        <div class="local-time"><img src="./images/clock.svg" alt="local time" class="icon-images"> 2023-10-29 22:12</div>
+                    </div>
+                    
+                </div>
+                <div class="current-conditions-cont">
+                    <div class="current-weather-grouping">
+                        <img src="//cdn.weatherapi.com/weather/64x64/day/176.png" alt="current weather" class="current-weather-icon">
+                        <div class="current-status">Patchy rain possible</div>
+                    </div>
+                    <div class="curr-temp">
+                        <img src="./images/thermometer.svg" alt="temperature" class="secondary-icon">
+                        <span class="curr-temp-reading">27.7&#xb0;C / 81.8&#xb0; F</span>
+                    </div>
+                
+                </div>
+                <div class="separator-line"></div>
+                <div class="forecast-cont">
+                    <div class="forecast-data" id="forecast-1">Day 1</div>
+                    <div class="forecast-data" id="forecast-1">Day 2</div>
+                    <div class="forecast-data" id="forecast-1">Day 3</div>
                 </div>
             </div>
         </div>

@@ -1,9 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Alumni+Sans:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alumni+Sans:wght@600&display=swap');
 
 html
 {
     font-family: 'Alumni Sans', sans-serif;
+    color: white;
+    
 }
+
+
+
 
 #main-section
 {
@@ -27,6 +32,12 @@ html
     flex-direction: row;
     align-items: center;
     
+}
+
+.main-grouping-div
+{
+    display: flex;
+
 }
 
 #main-logo
@@ -87,6 +98,8 @@ html
 #search-icon-img
 {
     width: 2rem;
+    filter: invert(0.8);
+    
 }
 
 .place-cont
@@ -96,32 +109,106 @@ html
     justify-content: center;
     align-items: center;
     margin-top: 8rem;
+    font-size: 2rem;
 
 }
 
 .City
 {
-    font-size: 7rem;
+    font-size: 11rem;
     color: white;
 }
 
 .location-grouping
 {
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: left;
+    font-size: 1.3rem;
+    padding-left: 3rem;
 }
 
 .country
 {
-    font-size: 2rem;
+    
     color: white;
-    margin-right: 5rem;
+    margin-right: 2rem;
+}
+
+.curr-temp
+{
+    display: flex;
+}
+
+.secondary-icon
+{
+    filter: invert();
+    width: 2rem;
+}
+
+.current-conditions-cont
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.current-weather-grouping
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.geo-grouping
+{
+    display: flex;
+    margin-bottom: 0.3rem;
+}
+
+.current-status
+{
+    margin-left: 1rem;
+    font-size: 3rem;
 }
 
 .coordinates-cont
 {
-    font-size: 2rem;
     color: white;
+}
+
+.local-time
+{
+    display: flex;
+    font-size: 1.3rem;
+}
+
+.icon-images
+{
+    filter: invert(1);
+    margin-right: 0.2rem;
+}
+
+.separator-line
+{
+    height: 3px;
+    background-color: white;
+    width: 60%;
+    margin-top: 4rem;
+    opacity: 0.4;
+}
+
+
+.forecast-cont
+{
+    display: flex;
+}
+
+.forecast-data
+{
+    margin: 5rem
 }
 
 

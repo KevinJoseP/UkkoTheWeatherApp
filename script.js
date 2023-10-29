@@ -23,16 +23,5 @@ async function fetchWeatherData (cityName)
 
 }
 
-function getCityName()
-{
-    const cityName = "delhi";
-    console.log(cityName);
-    return cityName;
-}
 
-function init()
-{
-   fetchWeatherData(getCityName());
-}
 
-//init();
