@@ -1,5 +1,5 @@
 const api_key = "20d948176a4e4dfa9f1115200232010";
-const api_url = `http://api.weatherapi.com/v1/forecast.json?key=${api_key}`;
+const api_url = `https://api.weatherapi.com/v1/forecast.json?key=${api_key}`;
 
 
 const THERMOMETER_LOGO_SRC = './images/thermometer.svg';
