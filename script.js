@@ -144,7 +144,16 @@ function buildLocationCont()
     timeImg.classList.add('icon-images');
     
     cityDiv.innerText = currLocationData.name;
-    countryDiv.innerText = `${currLocationData.region}, ${currLocationData.country}`;
+
+    if (currLocationData.region != '')
+    {
+        countryDiv.innerText = `${currLocationData.region}, ${currLocationData.country}`;
+    }
+    else
+    {
+        countryDiv.innerText = `${currLocationData.country}`;
+    }
+    
     localTimeSpan.innerText = currLocationData.localtime;
 
     geoGroupingDiv.appendChild(img);
