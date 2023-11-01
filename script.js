@@ -154,7 +154,7 @@ function buildLocationCont()
     localtimeDiv.appendChild(localTimeSpan);
 
     locationGroupDiv.appendChild(geoGroupingDiv);
-    locationGroupDiv.appendChild(localTimeSpan);
+    locationGroupDiv.appendChild(localtimeDiv);
 
     groupingDiv.appendChild(cityDiv);
     groupingDiv.appendChild(locationGroupDiv);
