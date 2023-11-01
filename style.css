@@ -8,13 +8,11 @@ html
 }
 
 
-
-
 #main-section
 {
     background-image: url(./images/pexels-kaique-rocha-125510.jpg);
     width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
     background-size:cover;
     background-color: rgba(0, 0, 0, 0.575);
     background-blend-mode: multiply;
@@ -24,12 +22,21 @@ html
     align-items: center;
 }
 
+.place-details-cont
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 .logo
 {
     width: 100vw;
     height: 7rem;
+    margin-top: 3rem;
     display: flex;
-    flex-direction: row;
+    flex-direction:column;
     align-items: center;
     
 }
@@ -43,7 +50,6 @@ html
 #main-logo
 {
     height: 80%;
-    padding-left: 3rem;
 }
 
 .search-bar-cont
@@ -80,6 +86,11 @@ html
     font-size: 1.2rem;
 }
 
+.curr-reading
+{
+    font-size: 2rem;
+}
+
 .button
 {
     background: none;
@@ -108,9 +119,8 @@ html
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 8rem;
+    margin-top: 2rem;
     font-size: 2rem;
-
 }
 
 .City
@@ -129,6 +139,14 @@ html
     padding-left: 3rem;
 }
 
+h3
+{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 2rem;
+}
+
 .country
 {
     
@@ -136,7 +154,7 @@ html
     margin-right: 2rem;
 }
 
-.curr-temp
+.curr-weather-data
 {
     display: flex;
 }
@@ -195,7 +213,7 @@ html
 {
     height: 3px;
     background-color: white;
-    width: 60%;
+    width: 40%;
     margin-top: 4rem;
     opacity: 0.4;
 }
@@ -206,9 +224,85 @@ html
     display: flex;
 }
 
+.forecast
+{
+    margin: 4rem 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.ternary-icon
+{
+    width: 1.5rem;
+    filter: invert();
+}
+
+.forecast-weather-icon
+{
+    width: 3rem;
+}
+
+.forecast-weather-data
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.forecast-weather-descr
+{
+    font-size: 1.5rem;
+}
+.forecast-data-cont
+{
+    display: flex;
+
+    align-items: center;
+}
+
 .forecast-data
 {
-    margin: 5rem
+    font-size: 1.5rem;
 }
+
+.refresh
+{
+    background: none;
+    border: none;
+    outline: none;
+    margin-top: 2rem;
+    opacity: 50%;
+    transition: transform 100ms ease-in;
+}
+
+.refresh-icon
+{
+    filter: invert();
+    width: 3rem;
+}
+
+.refresh:hover
+{
+    opacity: 100%;
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+.refresh:active
+{
+    transform-origin: center;
+    transform: scale(1.2) rotate(180deg);
+}
+
+footer
+{
+    font-family: 'Alumni Sans', sans-serif;
+    color: white;
+    font-size: 1rem;
+}
+
 
 

@@ -10,24 +10,27 @@
 </head>
 <body>
     <section id="main-section">
-        <div class="place-details-cont">
+        <div class="place-details-cont" id="curr-cont">
             <div class="logo"><img src="./images/ukko_logo.png" alt="Ukko the weather app logo" id="main-logo"></div>
             <div class="search-bar-cont">
-                <form action="" class="search-bar-form">
+                <form action="" class="search-bar-form" id="search-form">
                     <input type="text" id="search-input" placeholder="Search a place to get weather info">
-                    <button type="submit" class="button"><img src="./images/search.svg" alt="search" id="search-icon-img"></button>
+                    <button type="submit" class="button" id="search"><img src="./images/search.svg" alt="search" id="search-icon-img"></button>
                 </form>
             </div>
-            <div class="place-cont">
+            <button class="refresh" id="refresh"><img src="./images/refresh.svg" alt="refresh" class="refresh-icon"></button>
+            <div class="place-cont" id="place-cont">
                 <div class="main-grouping-div">
                     <div class="City">Kochi</div>
                     <div class="location-grouping">
                         <div class="geo-grouping">
                             <img src="./images/location.svg" alt="geographical location" class="icon-images">
                             <div class="country">India</div>
-                            <div class="coordinates-cont">35/78.3</div>
                         </div>
-                        <div class="local-time"><img src="./images/clock.svg" alt="local time" class="icon-images"> 2023-10-29 22:12</div>
+                        <div class="local-time">
+                            <img src="./images/clock.svg" alt="local time" class="icon-images">
+                            <span>2023-10-29 22:12</span>
+                        </div>
                     </div>
                     
                 </div>
@@ -36,21 +39,69 @@
                         <img src="//cdn.weatherapi.com/weather/64x64/day/176.png" alt="current weather" class="current-weather-icon">
                         <div class="current-status">Patchy rain possible</div>
                     </div>
-                    <div class="curr-temp">
+                    <div class="curr-weather-data">
                         <img src="./images/thermometer.svg" alt="temperature" class="secondary-icon">
-                        <span class="curr-temp-reading">27.7&#xb0;C / 81.8&#xb0; F</span>
+                        <div class="curr-reading">27.7&#xb0; C / 81.8&#xb0; F</div>
+                    </div>
+                    <div class="curr-weather-data">
+                        <img src="./images/humidity-logo.svg" alt="humidity" class="secondary-icon">
+                        <div class="curr-reading">75.0</div>
                     </div>
                 
                 </div>
-                <div class="separator-line"></div>
-                <div class="forecast-cont">
-                    <div class="forecast-data" id="forecast-1">Day 1</div>
-                    <div class="forecast-data" id="forecast-1">Day 2</div>
-                    <div class="forecast-data" id="forecast-1">Day 3</div>
+            </div>
+        </div>
+        <div class="separator-line"></div>
+        <div class="forecast-cont" id="forecast-cont">
+            <div class="forecast">
+                <h3>2023-10-29</h3>
+                <img src="//cdn.weatherapi.com/weather/64x64/night/266.png" alt="" class="forecast-weather-icon">
+                <div class="forecast-weather-descr">Patchy light drizzle</div>
+                <div class="forecast-weather-data">
+                    <div class="forecast-data-cont">
+                        <img src="./images/thermometer.svg" alt="temperature" class="ternary-icon">
+                        <div class="forecast-data">28&#xb0;C/82.7&#xb0; F</div>
+                    </div>
+                    <div class="forecast-data-cont">
+                        <img src="./images/humidity-logo.svg" alt="humidity" class="ternary-icon">
+                        <div class="forecast-data">75.0</div>
+                    </div>
+                </div>
+            </div>
+            <div class="forecast">
+                <h3>2023-10-30</h3>
+                <img src="//cdn.weatherapi.com/weather/64x64/night/266.png" alt="current weather" class="forecast-weather-icon">
+                <div class="forecast-weather-descr">Patchy light drizzle</div>
+                <div class="forecast-weather-data">
+                    <div class="forecast-data-cont">
+                        <img src="./images/thermometer.svg" alt="temperature" class="ternary-icon">
+                        <div class="forecast-data">28&#xb0;C/82.7&#xb0; F</div>
+                    </div>
+                    <div class="forecast-data-cont">
+                        <img src="./images/humidity-logo.svg" alt="humidity" class="ternary-icon">
+                        <div class="forecast-data">75.0</div>
+                    </div>
+                </div>
+            </div>
+            <div class="forecast">
+                <h3>2023-10-31</h3>
+                <img src="//cdn.weatherapi.com/weather/64x64/night/266.png" alt="current weather" class="forecast-weather-icon">
+                <div class="forecast-weather-descr">Patchy light drizzle</div>
+                <div class="forecast-weather-data">
+                    <div class="forecast-data-cont">
+                        <img src="./images/thermometer.svg" alt="temperature" class="ternary-icon">
+                        <div class="forecast-data">28&#xb0;C/82.7&#xb0; F</div>
+                    </div>
+                    <div class="forecast-data-cont">
+                        <img src="./images/humidity-logo.svg" alt="humidity" class="ternary-icon">
+                        <div class="forecast-data">75.0</div>
+                    </div>
                 </div>
             </div>
         </div>
+        <footer>Copyright &#169; Kevin Jose </footer>
     </section>
+    
     <script src="./script.js"></script>
 </body>
 </html>
