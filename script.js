@@ -11,28 +11,46 @@ const CLOCK_LOGO_SRC = './images/clock.svg';
 const LOCATION_LOGO_SRC = './images/location.svg';
 
 let cityName = 'goa';
+let newCityName = 'goa';
 
 let apiRespData = "";
 function handleResponse(json)
 {
    if(json.error)
    {
-       console.log(json.error.message);
+       displayErrorMessage(json.error.message);
+       apiRespData = '';
+       newCityName = cityName;
    }
    else
    {
-       console.log(json.current.condition.text);
+       apiRespData = json;
+       cityName = newCityName;
    }
+}
+
+function displayErrorMessage(message)
+{
+    const place = document.getElementById('place-cont');
+    const forecast = document.getElementById('forecast-cont');
+    place.innerHTML = '';
+    forecast.innerHTML = '';
+    place.innerText = message;
+
 }
 
 async function fetchWeatherData ()
 {
-    const currUrl = api_url + `&q=${cityName}&days=3&aqi=no&alerts=no`;
-
-    const resp = await fetch(currUrl, {mode: 'cors'});
-    const json = await resp.json();
-
-    apiRespData = json;
+    const currUrl = api_url + `&q=${newCityName}&days=3&aqi=no&alerts=no`;
+    try
+    {
+        const resp = await fetch(currUrl, {mode: 'cors'});
+        const json = await resp.json();
+        handleResponse(json);
+    } catch (error)
+    {
+        console.log(error);
+    }
 
 }
 
@@ -219,22 +237,28 @@ function buildCurrCont()
 async function init ()
 { 
     await fetchWeatherData();
-    buildCurrCont();
-    buildForecastCont();
+    if (apiRespData)
+    {
+        buildCurrCont();
+        buildForecastCont();
+    }
 }
 
 async function repaintWithNewCity()
 {
     await fetchWeatherData();
-    buildCurrCont();
-    buildForecastCont();
+    if (apiRespData)
+    {
+        buildCurrCont();
+        buildForecastCont();
+    }
+
 }
 
 function handleSearch(e)
 {
     e.preventDefault();
-    cityName = searchInput.value;
-    console.log(cityName);
+    newCityName = searchInput.value;
     repaintWithNewCity();
     searchInput.value = '';
     
