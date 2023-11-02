@@ -304,5 +304,78 @@ footer
     font-size: 1rem;
 }
 
+.none-display
+{
+    display: none;
+}
+
+.loader-cont
+{
+    margin: 10rem 0; 
+}
+
+
+
+
+.loader0
+{
+    width: 8rem;
+    background-color: rgba(255, 255, 255, 0.651);
+    height: 1rem;
+    border-radius: 30px;
+    animation-name: rotateIt;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loader1
+{
+    width: 5rem;
+    background-color: rgba(228, 61, 61, 0.651);
+    height: 1rem;
+    border-radius: 30px;
+    animation-name: rotateItOtherway;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loader2
+{
+    width: 3rem;
+    background-color: rgba(28, 95, 116, 0.651);
+    height: 1rem;
+    border-radius: 30px;
+    animation-name: rotateIt;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes rotateIt {
+    from {
+        transform:rotateZ(0);
+    }
+    to {
+        transform:rotateZ(360deg);
+    }
+}
+
+@keyframes rotateItOtherway {
+    from {
+        transform:rotateZ(0);
+    }
+    to {
+        transform:rotateZ(-360deg);
+    }
+}
+
 
 

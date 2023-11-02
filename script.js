@@ -14,6 +14,16 @@ let cityName = 'goa';
 let newCityName = 'goa';
 
 let apiRespData = "";
+
+
+const refresh = document.getElementById('refresh');
+const searchInput = document.getElementById('search-input');
+const searchForm = document.getElementById('search-form');
+const currCont = document.getElementById('place-cont');
+const forecast = document.getElementById('forecast-cont');
+const loader = document.getElementById('loader-cont');
+const separator = document.getElementById('separator');
+
 function handleResponse(json)
 {
    if(json.error)
@@ -31,11 +41,9 @@ function handleResponse(json)
 
 function displayErrorMessage(message)
 {
-    const place = document.getElementById('place-cont');
-    const forecast = document.getElementById('forecast-cont');
-    place.innerHTML = '';
+    currCont.innerHTML = '';
     forecast.innerHTML = '';
-    place.innerText = message;
+    currCont.innerText = message;
 
 }
 
@@ -125,14 +133,13 @@ function createForecastDayData(data)
 
 function buildForecastCont()
 {
-    const forecastCont = document.getElementById('forecast-cont');
-    forecastCont.innerHTML = '';
+    forecast.innerHTML = '';
     const forecastData = apiRespData.forecast.forecastday;
     for (let day in forecastData)
     {
-        forecastCont.appendChild(createForecastDayData(forecastData[day]));
+        forecast.appendChild(createForecastDayData(forecastData[day]));
     }
-    return forecastCont;
+    return forecast;
 }
 
 function buildLocationCont()
@@ -226,7 +233,6 @@ function buildCurrWeatherCont()
 
 function buildCurrCont()
 {
-    const currCont = document.getElementById('place-cont');
     currCont.innerHTML = '';
 
     currCont.appendChild(buildLocationCont());
@@ -246,12 +252,14 @@ async function init ()
 
 async function repaintWithNewCity()
 {
+    startLoadingAnimation();
     await fetchWeatherData();
     if (apiRespData)
     {
         buildCurrCont();
         buildForecastCont();
     }
+    stopLoadingAnimation();
 
 }
 
@@ -266,16 +274,35 @@ function handleSearch(e)
 
 function handlerefresh(e)
 {
+    startLoadingAnimation();
     init();
+    stopLoadingAnimation();
 }
 
+function startLoadingAnimation()
+{
+    refresh.classList.add('none-display');
+    currCont.classList.add('none-display');
+    separator.classList.add('none-display');
+    forecast.classList.add('none-display');
+    loader.classList.remove('none-display');
+}
+
+function stopLoadingAnimation()
+{
+    loader.classList.add('none-display');
+    refresh.classList.remove('none-display');
+    currCont.classList.remove('none-display');
+    separator.classList.remove('none-display');
+    forecast.classList.remove('none-display');
+}
+
+startLoadingAnimation();
 init();
+stopLoadingAnimation();
 
-const searchInput = document.getElementById('search-input');
-const searchForm = document.getElementById('search-form');
+
 searchForm.addEventListener('submit', handleSearch);
-
-const refresh = document.getElementById('refresh');
 refresh.addEventListener('click', handlerefresh);
 
 

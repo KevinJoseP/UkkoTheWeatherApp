@@ -19,8 +19,8 @@
                     <button type="submit" class="button" id="search"><img src="./images/search.svg" alt="search" id="search-icon-img"></button>
                 </form>
             </div>
-            <button class="refresh" id="refresh"><img src="./images/refresh.svg" alt="refresh" class="refresh-icon"></button>
-            <div class="place-cont" id="place-cont">
+            <button class="refresh none-display" id="refresh"><img src="./images/refresh.svg" alt="refresh" class="refresh-icon"></button>
+            <div class="place-cont none-display" id="place-cont">
                 <div class="main-grouping-div">
                     <div class="City">Kochi</div>
                     <div class="location-grouping">
@@ -51,8 +51,8 @@
                 </div>
             </div>
         </div>
-        <div class="separator-line"></div>
-        <div class="forecast-cont" id="forecast-cont">
+        <div class="separator-line none-display" id="separator"></div>
+        <div class="forecast-cont none-display" id="forecast-cont">
             <div class="forecast">
                 <h3>2023-10-29</h3>
                 <img src="//cdn.weatherapi.com/weather/64x64/night/266.png" alt="" class="forecast-weather-icon">
@@ -96,6 +96,13 @@
                         <img src="./images/humidity-logo.svg" alt="humidity" class="ternary-icon">
                         <div class="forecast-data">75.0</div>
                     </div>
+                </div>
+            </div>
+        </div>
+        <div class="loader-cont" id="loader-cont">
+            <div class="loader0">
+                <div class="loader1">
+                    <div class="loader2"></div>
                 </div>
             </div>
         </div>
