@@ -4,9 +4,9 @@ html
 {
     font-family: 'Alumni Sans', sans-serif;
     color: white;
+    text-align: center;
     
 }
-
 
 #main-section
 {
@@ -378,4 +378,37 @@ footer
 }
 
 
+@media only screen and (max-width: 950px)
+{
+    .forecast-cont
+    {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .main-grouping-div
+    {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .current-weather-grouping
+    {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .current-status
+    {
+        margin-left: 0;
+    }
+
+    .location-grouping
+    {
+        padding: 0;
+    }
+}
 
