@@ -8,6 +8,11 @@ html
     
 }
 
+*
+{
+    border: 1px solid red;
+}
+
 #main-section
 {
     background-image: url(./images/pexels-kaique-rocha-125510.jpg);
@@ -57,24 +62,28 @@ html
     width: 100%;
     display: flex;
     justify-content: center;
+    padding-left: 3rem;
+
     
 }
 .search-bar-form
 {
     display: flex;
     align-items: center;
+    justify-content: center;
     width: 40%;
-    margin-left: 3rem;
+    max-width: 70rem;
+    min-width: 300px;
 }
 
 #search-input
 {
-   width: max(5rem, 100%);
+   width: 80%;
    height: 3rem;
    border-radius: 20px;
    border: none;
    outline: none;
-   padding-left: 2rem;
+   padding-left: 1rem;
    background-color: rgba(101, 109, 109, 0.521);
    color: rgb(255, 254, 254);
    font-size: 1.3rem;
@@ -216,6 +225,7 @@ h3
     width: 40%;
     margin-top: 4rem;
     opacity: 0.4;
+    min-width: 250px;
 }
 
 
@@ -409,6 +419,16 @@ footer
     .location-grouping
     {
         padding: 0;
+    }
+
+    .City
+    {
+        font-size: 5rem;
+    }
+
+    .country
+    {
+        margin: 0;
     }
 }
 
